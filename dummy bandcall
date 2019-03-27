@@ -1,0 +1,21 @@
+{ offers:
+   [ { type: 'Tickets',
+       url:
+        'https://www.bandsintown.com/t/1012436443?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket',
+       status: 'available' } ],
+  venue:
+   { name: 'Bell Centre',
+     country: 'Canada',
+     region: '',
+     city: 'Montreal',
+     latitude: '45.496112',
+     longitude: '-73.569315' },
+  datetime: '2019-03-30T20:00:00',
+  on_sale_datetime: '2018-11-16T17:00:00',
+  description:
+   'Les billets Platine sont uniquement récupérables à la salle le JOUR DU SPECTACLE. Toutes les sections ne sont pas accessibles pour les personnes à mobilité réduite. SVP communiquer avec la billetterie du Centre Bell pour plus d\'information à propos des sections pour fauteuil roulant - 1-855-310-2525. Platinum tickets can only be picked up at the venue on the DAY OF THE SHOW. Not all the sections are accessible for wheelchairs. Please contact the Bell Centre box office for more information about the wheelchair sections - 1-855-310-2525.',
+  lineup: [ 'Muse' ],
+  id: '1012436443',
+  artist_id: '143',
+  url:
+   'https://www.bandsintown.com/e/1012436443?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event' }

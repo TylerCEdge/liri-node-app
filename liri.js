@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+var fs = require("fs");
+
 var axios = require("axios");
 
 var moment = require('moment');
@@ -62,6 +64,18 @@ if (action === 'movie-this') {
     bandInTown();
 } else if (action === 'spotify-this-song') {
     runSpotify();
+} else if (action === 'do-what-it-says') {
+    randomize();
+}
+
+function randomize() {
+    fs.readFile('./random.txt', 'utf8', function(err, data) {
+        if (err) {
+            return console.log(err);
+        }
+        var test = data.split(',')
+        console.log(test);
+    });
 }
 
 function bandInTown() {

@@ -73,8 +73,12 @@ function randomize() {
         if (err) {
             return console.log(err);
         }
-        var test = data.split(',')
-        console.log(test);
+        var dataNew = data.split(',');
+        action = dataNew[0];
+        input = dataNew[1];
+        if (dataNew[0] === 'spotify-this-song') {
+            runSpotify();
+        }
     });
 }
 

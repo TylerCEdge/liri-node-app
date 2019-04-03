@@ -78,6 +78,8 @@ function randomize() {
         input = dataNew[1];
         if (dataNew[0] === 'spotify-this-song') {
             runSpotify();
+            action = process.argv[2];
+            input = process.argv.slice(3).join(' ');
         }
     });
 }
@@ -85,21 +87,21 @@ function randomize() {
 function bandInTown() {
     axios.get("https://rest.bandsintown.com/artists/" + input + "/events?app_id=codingbootcamp")
         .then(function (response) {
-            for (var i = 0; i < 10; i++) {
-                var dateTest = response.data[i].venue.datatime
-                var converted = moment(dateTest).format('MMMM Do YYYY, h:mm:ss a')
+            for (var i = 0; i <= 10; i++) {
+
+                var time = moment(response.data[i].datetime).format('MMMM Do YYYY, h:mm:ss a');
+                
             
                 console.log('\n' + 'Venue Name: ' + response.data[i].venue.name + '\n' +
                     'Location: ' + response.data[i].venue.city + ', ' + response.data[i].venue.country + '\n' + 
-                    'Date/Time: ' + converted + '\n');
+                    'Date/Time: ' + time + '\n');
 
                 
                 
             }
 
         })
-}
-
+};
 
 
 
